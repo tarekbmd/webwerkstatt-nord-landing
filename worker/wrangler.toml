@@ -1,0 +1,20 @@
+name = "landing-form-worker"
+main = "worker.js"
+compatibility_date = "2026-02-01"
+account_id = "6b89326ea596b319412c91de7732e405"
+
+# KV for rate limiting
+[[kv_namespaces]]
+binding = "RATE_LIMIT"
+id = "" # TODO: Create KV namespace and add ID here
+
+# Secrets (set via wrangler secret put):
+# TELEGRAM_BOT_TOKEN
+# TELEGRAM_CHAT_ID
+# APPS_SCRIPT_URL
+
+# Custom domain (set up in Cloudflare Dashboard):
+# landing-form.webwerkstatt-nord.de → this worker
+
+# [vars]
+# ENVIRONMENT = "production"

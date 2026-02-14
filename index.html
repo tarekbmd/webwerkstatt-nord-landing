@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webwerkstatt Nord — Professionelle Websites für Handwerksbetriebe</title>
+    <meta name="description" content="Ihre neue Website, fertig in 24 Stunden. Kostenloser Entwurf mit Ihrem Firmennamen. €499 einmalig, kein Abo. Webwerkstatt Nord aus Hamburg.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://webwerkstatt-nord.de/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Webwerkstatt Nord — Ihre Website in 24 Stunden">
+    <meta property="og:description" content="Kostenloser Entwurf mit Ihrem Firmennamen. €499 einmalig, kein Abo.">
+    <meta property="og:url" content="https://webwerkstatt-nord.de/">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="Webwerkstatt Nord">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Webwerkstatt Nord",
+        "description": "Professionelle Websites für Handwerksbetriebe in Norddeutschland. Fertig in 24 Stunden.",
+        "telephone": "+494022634400",
+        "email": "t.bouamoud@webwerkstatt-nord.de",
+        "url": "https://webwerkstatt-nord.de",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hamburg",
+            "addressRegion": "Hamburg",
+            "addressCountry": "DE"
+        },
+        "areaServed": {
+            "@type": "GeoCircle",
+            "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 53.55, "longitude": 9.99 },
+            "geoRadius": "200000"
+        },
+        "priceRange": "€€"
+    }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f172a'/><text x='50' y='68' font-family='system-ui' font-size='48' font-weight='bold' fill='%23f97316' text-anchor='middle'>W</text></svg>">
+
+    <style>
+        :root {
+            --navy: #0f172a;
+            --navy-light: #1e293b;
+            --navy-mid: #334155;
+            --accent: #f97316;
+            --accent-hover: #ea580c;
+            --accent-light: #fff7ed;
+            --green: #10b981;
+            --green-light: #ecfdf5;
+            --text: #1e293b;
+            --text-mid: #475569;
+            --text-light: #94a3b8;
+            --bg: #ffffff;
+            --bg-alt: #f8fafc;
+            --border: #e2e8f0;
+            --radius: 12px;
+            --radius-lg: 20px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ============ LAYOUT ============ */
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* ============ TYPOGRAPHY ============ */
+        h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; }
+        h2 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 700; line-height: 1.2; letter-spacing: -0.02em; }
+        h3 { font-size: 1.15rem; font-weight: 700; line-height: 1.3; }
+
+        .section-label {
+            display: inline-block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent);
+            margin-bottom: 12px;
+        }
+
+        .section-title {
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-mid);
+            max-width: 600px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-header .section-subtitle {
+            margin: 0 auto;
+        }
+
+        /* ============ BUTTONS ============ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 16px 32px;
+            min-height: 52px;
+            font-size: 1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(249, 115, 22, 0.35);
+        }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(249, 115, 22, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.25);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.15);
+            border-color: rgba(255,255,255,0.4);
+        }
+
+        .btn-white {
+            background: #fff;
+            color: var(--navy);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .btn-arrow::after {
+            content: '→';
+            transition: transform 0.2s;
+        }
+
+        .btn-arrow:hover::after {
+            transform: translateX(3px);
+        }
+
+        /* ============ HEADER ============ */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 0;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            padding: 10px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-phone {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: none;
+        }
+
+        .header-phone:hover { color: #fff; }
+
+        @media (min-width: 768px) {
+            .header-phone { display: block; }
+        }
+
+        .header-btn {
+            padding: 10px 20px;
+            min-height: 40px;
+            font-size: 0.85rem;
+        }
+
+        /* ============ HERO ============ */
+        .hero {
+            background: linear-gradient(135deg, var(--navy) 0%, #0c1929 50%, #111c36 100%);
+            color: #fff;
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 70%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(249, 115, 22, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        @media (min-width: 900px) {
+            .hero-content { grid-template-columns: 1fr 1fr; }
+        }
+
+        .hero-text { position: relative; z-index: 2; }
+
+        .hero h1 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero-sub {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 36px;
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-trust {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .hero-trust-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .hero-trust-item svg {
+            width: 16px;
+            height: 16px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .hero-visual {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mockup-container {
+            position: relative;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .mockup-laptop {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 12px;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+            position: relative;
+        }
+
+        .mockup-screen {
+            background: linear-gradient(180deg, #0b1d30 0%, #14304d 100%);
+            border-radius: 6px;
+            aspect-ratio: 16/10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            text-align: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .mockup-screen-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 32px;
+            background: rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            gap: 6px;
+        }
+
+        .mockup-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+        }
+
+        .mockup-firm {
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+
+        .mockup-tagline {
+            font-size: clamp(0.65rem, 1.2vw, 0.8rem);
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 16px;
+        }
+
+        .mockup-btn {
+            background: #10b981;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .mockup-phone {
+            position: absolute;
+            right: -24px;
+            bottom: -20px;
+            width: 110px;
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 6px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .mockup-phone-screen {
+            background: linear-gradient(180deg, #0b1d30 0%, #14304d 100%);
+            border-radius: 12px;
+            aspect-ratio: 9/16;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 6px;
+        }
+
+        .mockup-phone .mockup-firm { font-size: 0.55rem; }
+        .mockup-phone .mockup-btn { font-size: 0.5rem; padding: 3px 8px; }
+
+        /* ============ STEPS ============ */
+        .steps { background: var(--bg); }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        @media (min-width: 768px) {
+            .steps-grid { grid-template-columns: repeat(3, 1fr); gap: 40px; }
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 32px 24px;
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .step-card h3 {
+            margin-bottom: 8px;
+            color: var(--navy);
+        }
+
+        .step-card p {
+            color: var(--text-mid);
+            font-size: 0.95rem;
+        }
+
+        .step-arrow {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            color: var(--border);
+            font-size: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .steps-grid {
+                grid-template-columns: 1fr auto 1fr auto 1fr;
+            }
+            .step-arrow { display: flex; }
+        }
+
+        /* ============ SHOWCASE ============ */
+        .showcase { background: var(--bg-alt); }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        @media (min-width: 768px) {
+            .showcase-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .showcase-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+        }
+
+        .showcase-preview {
+            aspect-ratio: 16/10;
+            background: linear-gradient(135deg, #0b1d30 0%, #14304d 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-preview::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(16, 185, 129, 0.08) 0%, transparent 60%);
+        }
+
+        .showcase-preview-name {
+            font-weight: 700;
+            color: #fff;
+            font-size: 1rem;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 4px;
+        }
+
+        .showcase-preview-type {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.4);
+            position: relative;
+            z-index: 1;
+            margin-bottom: 16px;
+        }
+
+        .showcase-preview-cta {
+            background: #10b981;
+            color: #fff;
+            padding: 5px 14px;
+            border-radius: 6px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .showcase-info {
+            padding: 16px 20px;
+        }
+
+        .showcase-info h3 {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .showcase-info p {
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        .showcase-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        /* ============ SOCIAL PROOF ============ */
+        .proof { background: var(--bg); }
+
+        .proof-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .proof-stat {
+            text-align: center;
+        }
+
+        .proof-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .proof-stat-label {
+            font-size: 0.85rem;
+            color: var(--text-mid);
+            margin-top: 4px;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 20px;
+            background: var(--bg-alt);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+        }
+
+        .trust-badge svg {
+            width: 24px;
+            height: 24px;
+            color: var(--green);
+            flex-shrink: 0;
+        }
+
+        .trust-badge-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* ============ FEATURES ============ */
+        .features {
+            background: var(--navy);
+            color: #fff;
+        }
+
+        .features .section-label { color: var(--accent); }
+        .features .section-title { color: #fff; }
+        .features .section-subtitle { color: rgba(255,255,255,0.6); }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        @media (min-width: 600px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (min-width: 900px) {
+            .features-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+
+        .feature-card {
+            padding: 28px 24px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: var(--radius);
+            transition: all 0.2s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(255,255,255,0.12);
+        }
+
+        .feature-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(249, 115, 22, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 6px;
+            font-size: 1rem;
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.5;
+        }
+
+        /* ============ PRICING + FAQ ============ */
+        .pricing { background: var(--bg-alt); }
+
+        .pricing-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        @media (min-width: 768px) {
+            .pricing-layout { grid-template-columns: 1fr 1fr; }
+        }
+
+        .price-card {
+            background: #fff;
+            border-radius: var(--radius-lg);
+            padding: 40px 32px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+            border: 2px solid var(--accent);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .price-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent);
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .price-suffix {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-mid);
+            margin-left: 4px;
+        }
+
+        .price-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: 8px 0 24px;
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+
+        .price-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .price-features li svg {
+            width: 20px;
+            height: 20px;
+            color: var(--green);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .price-highlight {
+            background: var(--green-light);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #065f46;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+
+        .price-card .btn { width: 100%; }
+
+        /* FAQ */
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            padding: 16px 20px;
+            background: none;
+            border: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            font-family: inherit;
+        }
+
+        .faq-question:hover { color: var(--accent); }
+
+        .faq-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer-inner {
+            padding: 0 20px 16px;
+            font-size: 0.9rem;
+            color: var(--text-mid);
+            line-height: 1.7;
+        }
+
+        /* ============ CTA + FORM ============ */
+        .cta-section {
+            background: var(--navy);
+            color: #fff;
+            padding: 80px 0;
+        }
+
+        .cta-layout {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 56px;
+            align-items: start;
+        }
+
+        @media (min-width: 768px) {
+            .cta-layout { grid-template-columns: 1fr 1fr; }
+        }
+
+        .cta-text h2 {
+            color: #fff;
+            margin-bottom: 16px;
+        }
+
+        .cta-text p {
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 32px;
+            font-size: 1.05rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .contact-item:hover { color: #fff; }
+
+        .contact-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            color: var(--accent);
+        }
+
+        .form-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: var(--radius-lg);
+            padding: 32px 28px;
+        }
+
+        .form-card h3 {
+            color: #fff;
+            margin-bottom: 4px;
+            font-size: 1.2rem;
+        }
+
+        .form-card .form-sub {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem;
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 8px;
+            color: #fff;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input::placeholder {
+            color: rgba(255,255,255,0.3);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .form-submit {
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .form-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.35);
+            margin-top: 12px;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 32px 16px;
+        }
+
+        .form-success svg {
+            width: 56px;
+            height: 56px;
+            color: var(--green);
+            margin-bottom: 16px;
+        }
+
+        .form-success h3 {
+            margin-bottom: 8px;
+        }
+
+        .form-success p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+        }
+
+        /* Hidden honeypot */
+        .hp-field { position: absolute; left: -9999px; opacity: 0; }
+
+        /* ============ FOOTER ============ */
+        .footer {
+            background: #080e1a;
+            color: rgba(255,255,255,0.4);
+            padding: 32px 0;
+            font-size: 0.85rem;
+        }
+
+        .footer-inner {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        /* ============ ANIMATIONS ============ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .reveal-d1 { transition-delay: 0.1s; }
+        .reveal-d2 { transition-delay: 0.2s; }
+        .reveal-d3 { transition-delay: 0.3s; }
+
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 767px) {
+            section { padding: 56px 0; }
+            .hero { padding: 120px 0 72px; }
+            .btn { width: 100%; }
+            .price-card { padding: 28px 20px; }
+            .proof-stats { gap: 32px; }
+            .mockup-phone { width: 80px; right: -12px; bottom: -12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ═══ HEADER ═══ -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <div class="logo-icon">W</div>
+                    <span>Webwerkstatt Nord</span>
+                </a>
+                <div class="header-cta">
+                    <a href="tel:+494022634400" class="header-phone">040 226 34 400</a>
+                    <a href="#kontakt" class="btn btn-primary header-btn btn-arrow">Entwurf anfordern</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══ 1. HERO ═══ -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Ihre neue Website.<br><span>Fertig in 24 Stunden.</span></h1>
+                    <p class="hero-sub">Wir erstellen einen kostenlosen Entwurf mit Ihrem Firmennamen und Ihren Daten. Sie entscheiden danach — kein Risiko, keine Verpflichtung.</p>
+                    <div class="hero-ctas">
+                        <a href="#kontakt" class="btn btn-primary btn-arrow">Kostenlosen Entwurf anfordern</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="hero-trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            100% kostenlos
+                        </div>
+                        <div class="hero-trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Unverbindlich
+                        </div>
+                        <div class="hero-trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            Aus Hamburg
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="mockup-container">
+                        <div class="mockup-laptop">
+                            <div class="mockup-screen">
+                                <div class="mockup-screen-header">
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                    <div class="mockup-dot"></div>
+                                </div>
+                                <div class="mockup-firm">Mustermann Reinigung</div>
+                                <div class="mockup-tagline">Professionelle Gebäudereinigung in Hamburg</div>
+                                <div class="mockup-btn">Jetzt anfragen</div>
+                            </div>
+                        </div>
+                        <div class="mockup-phone">
+                            <div class="mockup-phone-screen">
+                                <div class="mockup-firm">Mustermann</div>
+                                <div class="mockup-btn">Anrufen</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 2. SO FUNKTIONIERT'S ═══ -->
+    <section class="steps" id="ablauf">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">So funktioniert's</div>
+                <h2 class="section-title">In 3 Schritten zur neuen Website</h2>
+                <p class="section-subtitle">Kein technisches Wissen nötig. Wir kümmern uns um alles.</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card reveal">
+                    <div class="step-number">1</div>
+                    <h3>Wir erstellen Ihren Entwurf</h3>
+                    <p>Mit Ihrem Firmennamen, Ihrer Adresse und Ihren Daten. Kostenlos und unverbindlich.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card reveal reveal-d1">
+                    <div class="step-number">2</div>
+                    <h3>Sie schauen ihn an</h3>
+                    <p>Live im Browser, direkt auf Ihrem Handy. Keine Anmeldung, kein Download.</p>
+                </div>
+                <div class="step-arrow">→</div>
+                <div class="step-card reveal reveal-d2">
+                    <div class="step-number">3</div>
+                    <h3>Sie entscheiden</h3>
+                    <p>Gefällt er Ihnen? €499 einmalig. Kein Abo, keine monatlichen Kosten. Fertig.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 3. VORHER/NACHHER (SHOWCASE) ═══ -->
+    <section class="showcase" id="beispiele">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Beispiele</div>
+                <h2 class="section-title">Von veraltet zu professionell</h2>
+                <p class="section-subtitle">Echte Entwürfe für norddeutsche Unternehmen. Klicken Sie drauf — die Websites sind live.</p>
+            </div>
+            <div class="showcase-grid">
+                <a href="https://projekte.webwerkstatt-nord.de/blattgold-gebaeudedienste/" target="_blank" rel="noopener" class="showcase-card reveal">
+                    <div class="showcase-preview">
+                        <div class="showcase-preview-name">Blattgold Gebäudedienste</div>
+                        <div class="showcase-preview-type">Gebäudereinigung</div>
+                        <div class="showcase-preview-cta">Jetzt anfragen</div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>Gebäudereinigung</h3>
+                        <p>Professionelles Design mit Kontaktformular</p>
+                        <span class="showcase-link">Live ansehen →</span>
+                    </div>
+                </a>
+                <a href="https://projekte.webwerkstatt-nord.de/alles-klar-schluesseldienst-schluesselnotdienst-hamburg/" target="_blank" rel="noopener" class="showcase-card reveal reveal-d1">
+                    <div class="showcase-preview" style="background: linear-gradient(135deg, #0c1929 0%, #1a2744 100%);">
+                        <div class="showcase-preview-name">Alles Klar Schlüsseldienst</div>
+                        <div class="showcase-preview-type">Schlüsselnotdienst</div>
+                        <div class="showcase-preview-cta" style="background: #f59e0b;">Jetzt anrufen</div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>Schlüsseldienst</h3>
+                        <p>Notdienst-Design mit Anruf-Button</p>
+                        <span class="showcase-link">Live ansehen →</span>
+                    </div>
+                </a>
+                <a href="https://projekte.webwerkstatt-nord.de/bartsch-k-p-gebaeudereinigungsges-mbh/" target="_blank" rel="noopener" class="showcase-card reveal reveal-d2">
+                    <div class="showcase-preview" style="background: linear-gradient(135deg, #0b1d30 0%, #172e4a 100%);">
+                        <div class="showcase-preview-name">Bartsch K&P GmbH</div>
+                        <div class="showcase-preview-type">Gebäudereinigung</div>
+                        <div class="showcase-preview-cta">Angebot anfordern</div>
+                    </div>
+                    <div class="showcase-info">
+                        <h3>Reinigung GmbH</h3>
+                        <p>Seriöser Auftritt mit Google Maps</p>
+                        <span class="showcase-link">Live ansehen →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 4. SOCIAL PROOF ═══ -->
+    <section class="proof">
+        <div class="container">
+            <div class="proof-stats reveal">
+                <div class="proof-stat">
+                    <div class="proof-stat-number">150+</div>
+                    <div class="proof-stat-label">Entwürfe erstellt</div>
+                </div>
+                <div class="proof-stat">
+                    <div class="proof-stat-number">24h</div>
+                    <div class="proof-stat-label">Lieferzeit</div>
+                </div>
+                <div class="proof-stat">
+                    <div class="proof-stat-number">€0</div>
+                    <div class="proof-stat-label">Entwurf kostet</div>
+                </div>
+            </div>
+            <div class="trust-badges reveal">
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    <span class="trust-badge-text">SSL-verschlüsselt</span>
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <span class="trust-badge-text">DSGVO-konform</span>
+                </div>
+                <div class="trust-badge">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <span class="trust-badge-text">Made in Hamburg</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 5. WAS SIE BEKOMMEN ═══ -->
+    <section class="features" id="leistungen">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Leistungen</div>
+                <h2 class="section-title">Was Sie bekommen</h2>
+                <p class="section-subtitle">Alles was ein moderner Handwerksbetrieb braucht — in einem Paket.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Eigene Domain (.de)</h3>
+                    <p>Kunden finden Sie bei Google — mit Ihrer eigenen .de-Adresse.</p>
+                </div>
+                <div class="feature-card reveal reveal-d1">
+                    <div class="feature-icon">📱</div>
+                    <h3>Handy-optimiert</h3>
+                    <p>60% Ihrer Kunden suchen mobil. Ihre Website sieht überall perfekt aus.</p>
+                </div>
+                <div class="feature-card reveal reveal-d2">
+                    <div class="feature-icon">📞</div>
+                    <h3>Kontaktformular + Anruf</h3>
+                    <p>Anfragen landen direkt auf Ihrem Handy — per Mail oder Anruf.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon">📍</div>
+                    <h3>Google Maps</h3>
+                    <p>Kunden sehen sofort wo Sie sind. Vertrauen durch lokale Präsenz.</p>
+                </div>
+                <div class="feature-card reveal reveal-d1">
+                    <div class="feature-icon">👥</div>
+                    <h3>Bewerbungs-Sektion</h3>
+                    <p>Fachkräftemangel? Zeigen Sie Bewerbern dass Sie ein moderner Arbeitgeber sind.</p>
+                </div>
+                <div class="feature-card reveal reveal-d2">
+                    <div class="feature-icon">🔒</div>
+                    <h3>SSL-Verschlüsselung</h3>
+                    <p>Das grüne Schloss im Browser. Vertrauen bei Besuchern und Google.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 6. PREIS + FAQ ═══ -->
+    <section class="pricing" id="preis">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Transparent</div>
+                <h2 class="section-title">Ein Preis. Alles drin.</h2>
+            </div>
+            <div class="pricing-layout">
+                <div class="price-card reveal">
+                    <div class="price-amount">€499<span class="price-suffix">einmalig</span></div>
+                    <p class="price-desc">Einmalzahlung — keine versteckten Kosten</p>
+                    <div class="price-highlight">Kein Abo. Keine monatlichen Kosten.</div>
+                    <ul class="price-features">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Professionelle Website
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Eigene .de-Domain
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Handy-optimiert (Responsive)
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Kontaktformular + Anruf-Button
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Google Maps Einbindung
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            SSL-Verschlüsselung
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Änderungswünsche inklusive
+                        </li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn-primary btn-arrow">Kostenlosen Entwurf anfordern</a>
+                </div>
+
+                <div class="reveal">
+                    <h3 style="margin-bottom: 20px;">Häufige Fragen</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                Kann ich den Entwurf vorher sehen?
+                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Ja! Wir erstellen den Entwurf mit Ihrem Firmennamen und Ihren Daten — komplett kostenlos. Sie sehen eine fertige, live Website, bevor Sie sich entscheiden.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                Was wenn er mir nicht gefällt?
+                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Dann löschen wir alles. Kein Risiko, keine Kosten. Der Entwurf ist ein Geschenk — Sie gehen keinerlei Verpflichtung ein.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                Kann ich Änderungen wünschen?
+                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Ja, Änderungswünsche sind inklusive. Farben, Texte, Bilder — wir passen alles an, bis Sie zufrieden sind.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                Brauche ich technisches Wissen?
+                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Nein. Wir kümmern uns um alles — Technik, Domain, Hosting, SSL. Sie müssen nur sagen: "Ja, gefällt mir."</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                Wie lange dauert es?
+                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">24 Stunden. Nachdem Sie Ihre Daten geschickt haben, steht Ihr Entwurf am nächsten Tag online.</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                Was kostet Hosting danach?
+                                <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                            </button>
+                            <div class="faq-answer">
+                                <div class="faq-answer-inner">Hosting und Domain kosten ab €5–10 pro Monat. Das besprechen wir transparent, bevor Sie sich entscheiden.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ 7. FOOTER-CTA + KONTAKT + FORMULAR ═══ -->
+    <section class="cta-section" id="kontakt">
+        <div class="container">
+            <div class="cta-layout">
+                <div class="cta-text">
+                    <div class="section-label">Jetzt starten</div>
+                    <h2>Kostenloser Entwurf.<br>In 24 Stunden fertig.</h2>
+                    <p>Schicken Sie uns Ihren Firmennamen — wir erstellen Ihren persönlichen Website-Entwurf. Kostenlos und unverbindlich.</p>
+                    <div class="contact-info">
+                        <a href="tel:+494022634400" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            040 226 34 400
+                        </a>
+                        <a href="mailto:t.bouamoud@webwerkstatt-nord.de" class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            t.bouamoud@webwerkstatt-nord.de
+                        </a>
+                        <div class="contact-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            Tarek Bouamoud · Webwerkstatt Nord · Hamburg
+                        </div>
+                    </div>
+                </div>
+                <div class="form-card">
+                    <form id="lead-form" novalidate>
+                        <h3>Entwurf anfordern</h3>
+                        <p class="form-sub">Kostenlos und unverbindlich</p>
+                        <div class="form-group">
+                            <label for="firma">Firmenname *</label>
+                            <input type="text" id="firma" name="firma" placeholder="z.B. Müller Gebäudereinigung" required autocomplete="organization">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-Mail *</label>
+                            <input type="email" id="email" name="email" placeholder="ihre@email.de" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefon">Telefon <span style="font-weight:400;color:rgba(255,255,255,0.35);">(optional)</span></label>
+                            <input type="tel" id="telefon" name="telefon" placeholder="040 ..." autocomplete="tel">
+                        </div>
+                        <!-- Honeypot -->
+                        <div class="hp-field" aria-hidden="true">
+                            <label for="website">Website</label>
+                            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-arrow form-submit">Entwurf anfordern</button>
+                        <p class="form-note">Ihre Daten sind sicher. Wir melden uns innerhalb von 24 Stunden.</p>
+                    </form>
+                    <div class="form-success" id="form-success">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                        <h3>Anfrage erhalten!</h3>
+                        <p>Wir erstellen Ihren Entwurf und melden uns innerhalb von 24 Stunden bei Ihnen.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div>&copy; 2026 Webwerkstatt Nord · Tarek Bouamoud · Hamburg</div>
+                <div class="footer-links">
+                    <a href="https://projekte.webwerkstatt-nord.de/impressum/">Impressum</a>
+                    <a href="https://projekte.webwerkstatt-nord.de/datenschutz/">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // ── Header scroll effect ──
+        var header = document.getElementById('header');
+        var scrolled = false;
+        window.addEventListener('scroll', function() {
+            var shouldScroll = window.scrollY > 50;
+            if (shouldScroll !== scrolled) {
+                scrolled = shouldScroll;
+                header.classList.toggle('scrolled', scrolled);
+            }
+        }, { passive: true });
+
+        // ── Reveal on scroll ──
+        var reveals = document.querySelectorAll('.reveal');
+        var observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+        reveals.forEach(function(el) { observer.observe(el); });
+
+        // ── FAQ Accordion ──
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.closest('.faq-item');
+                var answer = item.querySelector('.faq-answer');
+                var isOpen = item.classList.contains('open');
+
+                // Close all
+                document.querySelectorAll('.faq-item.open').forEach(function(openItem) {
+                    openItem.classList.remove('open');
+                    openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                    openItem.querySelector('.faq-answer').style.maxHeight = '0';
+                });
+
+                // Open clicked if was closed
+                if (!isOpen) {
+                    item.classList.add('open');
+                    this.setAttribute('aria-expanded', 'true');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // ── Form submission ──
+        var form = document.getElementById('lead-form');
+        var success = document.getElementById('form-success');
+        var WORKER_URL = 'https://landing-form.webwerkstatt-nord.de/api/lead';
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Honeypot check
+            if (form.website.value) return;
+
+            var firma = form.firma.value.trim();
+            var email = form.email.value.trim();
+            var telefon = form.telefon.value.trim();
+
+            if (!firma || !email) return;
+
+            var btn = form.querySelector('.form-submit');
+            btn.disabled = true;
+            btn.textContent = 'Wird gesendet...';
+
+            fetch(WORKER_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    firma: firma,
+                    email: email,
+                    telefon: telefon,
+                    quelle: 'landing-page'
+                })
+            })
+            .then(function(res) {
+                if (!res.ok) throw new Error('Fehler');
+                form.style.display = 'none';
+                success.style.display = 'block';
+            })
+            .catch(function() {
+                // Fallback: mailto
+                var subject = encodeURIComponent('Entwurf anfordern: ' + firma);
+                var body = encodeURIComponent('Firmenname: ' + firma + '\nE-Mail: ' + email + '\nTelefon: ' + (telefon || '-'));
+                window.location.href = 'mailto:t.bouamoud@webwerkstatt-nord.de?subject=' + subject + '&body=' + body;
+                btn.disabled = false;
+                btn.textContent = 'Entwurf anfordern →';
+            });
+        });
+
+        // ── Smooth scroll for anchor links ──
+        document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    })();
+    </script>
+</body>
+</html>
