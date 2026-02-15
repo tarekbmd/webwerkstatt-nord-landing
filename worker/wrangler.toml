@@ -2,11 +2,11 @@ name = "landing-form-worker"
 main = "worker.js"
 compatibility_date = "2026-02-01"
 account_id = "6b89326ea596b319412c91de7732e405"
+workers_dev = true
 
-# KV for rate limiting
 [[kv_namespaces]]
 binding = "RATE_LIMIT"
-id = "" # TODO: Create KV namespace and add ID here
+id = "278556b37c6f49a894edab60a7a96d92"
 
 # Secrets (set via wrangler secret put):
 # TELEGRAM_BOT_TOKEN
