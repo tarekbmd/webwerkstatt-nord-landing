@@ -1,12 +1,13 @@
 /**
  * Landing Form Worker — webwerkstatt-nord.de
  *
- * POST /api/lead → Validates → Google Sheet (via Apps Script) → Telegram notification
+ * POST /api/lead → Validates → Airtable → Telegram notification
  *
  * Environment Variables (Secrets):
  *   TELEGRAM_BOT_TOKEN  - Telegram bot token
  *   TELEGRAM_CHAT_ID    - Chat ID for notifications
- *   APPS_SCRIPT_URL     - Google Apps Script Web App URL for Sheet writes
+ *   AIRTABLE_API_KEY    - Airtable Personal Access Token
+ *   AIRTABLE_BASE_ID    - Airtable Base ID (Website-Verkauf)
  *
  * KV Namespace:
  *   RATE_LIMIT - For rate limiting (5 submissions/IP/hour)
@@ -134,28 +135,36 @@ function escapeMarkdown(text) {
   return String(text).replace(/[_*[\]()~`>#+=|{}.!-]/g, '\\$&');
 }
 
-// Write to Google Sheet via Apps Script Web App
-async function writeToSheet(env, lead) {
-  if (!env.APPS_SCRIPT_URL) return;
+// Write to Airtable (Website-Verkauf > Inbound Leads)
+const AIRTABLE_TABLE = 'Inbound Leads';
+
+async function writeToAirtable(env, lead) {
+  if (!env.AIRTABLE_API_KEY || !env.AIRTABLE_BASE_ID) return;
 
   try {
-    const res = await fetch(env.APPS_SCRIPT_URL, {
+    const res = await fetch(`https://api.airtable.com/v0/${env.AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE)}`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Authorization': `Bearer ${env.AIRTABLE_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
-        timestamp: new Date().toISOString(),
-        firma: lead.firma,
-        email: lead.email,
-        telefon: lead.telefon || '',
-        quelle: lead.quelle || 'landing-page',
+        fields: {
+          Firma: lead.firma,
+          Email: lead.email,
+          Telefon: lead.telefon || '',
+          Quelle: lead.quelle || 'landing-page',
+          Status: 'Neu',
+        },
       }),
     });
 
     if (!res.ok) {
-      console.error('Sheet write failed:', res.status);
+      const text = await res.text().catch(() => '');
+      console.error('Airtable write failed:', res.status, text);
     }
   } catch (e) {
-    console.error('Sheet error:', e);
+    console.error('Airtable error:', e);
   }
 }
 
@@ -207,9 +216,9 @@ export default {
       quelle: data.quelle || 'landing-page',
     };
 
-    // Write to Sheet + send Telegram in parallel
+    // Write to Airtable + send Telegram in parallel
     await Promise.allSettled([
-      writeToSheet(env, lead),
+      writeToAirtable(env, lead),
       sendTelegram(env, lead),
     ]);
 
