@@ -208,13 +208,18 @@ export default {
       const referrer = data.referrer || 'direkt';
       const ua = request.headers.get('User-Agent') || '';
       const isMobile = /Mobile|Android|iPhone/i.test(ua);
+      const isBot = /bot|crawl|spider|slurp|Googlebot|Bingbot|facebookexternalhit|Twitterbot|LinkedInBot|WhatsApp|Telegram|curl|wget|python|Go-http|HeadlessChrome|Lighthouse|PageSpeed/i.test(ua);
+      const country = request.headers.get('CF-IPCountry') || '??';
+      const city = request.cf && request.cf.city ? request.cf.city : '';
 
       if (env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) {
         const text = [
-          `👀 *Besucher auf ${escapeMarkdown(page)}*`,
+          `${isBot ? '🤖' : '👀'} *${isBot ? 'Bot' : 'Besucher'} auf ${escapeMarkdown(page)}*`,
           '',
           `📱 ${isMobile ? 'Mobil' : 'Desktop'}`,
+          city ? `📍 ${escapeMarkdown(city)}, ${country}` : `📍 ${country}`,
           `🔗 Referrer: ${escapeMarkdown(referrer)}`,
+          `🌐 ${escapeMarkdown(ua.length > 80 ? ua.substring(0, 80) + '...' : ua)}`,
           `⏰ ${new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' })}`,
         ].join('\n');
 
