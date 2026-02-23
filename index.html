@@ -1458,6 +1458,18 @@
     (function() {
         'use strict';
 
+        // ── Visit tracking ──
+        try {
+            fetch('https://landing-form-worker.coffee-recoveryhh.workers.dev/api/visit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    page: 'webwerkstatt-nord.de',
+                    referrer: document.referrer || 'direkt'
+                })
+            }).catch(function() {});
+        } catch(e) {}
+
         // ── Header scroll effect ──
         var header = document.getElementById('header');
         var scrolled = false;

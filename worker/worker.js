@@ -16,6 +16,8 @@
 const ALLOWED_ORIGINS = [
   'https://webwerkstatt-nord.de',
   'https://www.webwerkstatt-nord.de',
+  'https://webwerkstatt-hamburg.de',
+  'https://www.webwerkstatt-hamburg.de',
 ];
 
 // Allow localhost in development
@@ -182,8 +184,59 @@ export default {
       return jsonResponse({ status: 'ok', timestamp: Date.now() }, 200, corsHeaders);
     }
 
-    // Only POST /api/lead
     const url = new URL(request.url);
+
+    // POST /api/visit — page visit tracking
+    if (url.pathname === '/api/visit' && request.method === 'POST') {
+      // Fire-and-forget: don't block the visitor
+      const ip = request.headers.get('CF-Connecting-IP') || 'unknown';
+      const visitKey = `visit:${ip}`;
+
+      // Deduplicate: max 1 notification per IP per hour
+      if (env.RATE_LIMIT) {
+        const existing = await env.RATE_LIMIT.get(visitKey);
+        if (existing) {
+          return jsonResponse({ ok: true }, 200, corsHeaders);
+        }
+        await env.RATE_LIMIT.put(visitKey, '1', { expirationTtl: 3600 });
+      }
+
+      let data = {};
+      try { data = await request.json(); } catch {}
+
+      const page = data.page || 'unbekannt';
+      const referrer = data.referrer || 'direkt';
+      const ua = request.headers.get('User-Agent') || '';
+      const isMobile = /Mobile|Android|iPhone/i.test(ua);
+
+      if (env.TELEGRAM_BOT_TOKEN && env.TELEGRAM_CHAT_ID) {
+        const text = [
+          `👀 *Besucher auf ${escapeMarkdown(page)}*`,
+          '',
+          `📱 ${isMobile ? 'Mobil' : 'Desktop'}`,
+          `🔗 Referrer: ${escapeMarkdown(referrer)}`,
+          `⏰ ${new Date().toLocaleString('de-DE', { timeZone: 'Europe/Berlin' })}`,
+        ].join('\n');
+
+        try {
+          await fetch(`https://api.telegram.org/bot${env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: env.TELEGRAM_CHAT_ID,
+              text,
+              parse_mode: 'Markdown',
+            }),
+          });
+        } catch (e) {
+          console.error('Telegram visit error:', e);
+        }
+      }
+
+      return jsonResponse({ ok: true }, 200, corsHeaders);
+    }
+
+    // Only POST /api/lead
     if (url.pathname !== '/api/lead' || request.method !== 'POST') {
       return jsonResponse({ error: 'Not found' }, 404, corsHeaders);
     }
